@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>questions</title>
+            <meta name="viewport" content="width=device width, initial-scale=1">
+            </head>
+<body style="background-color:lightyellow;">
+    <h1 style="color: red;">question-1</h1>
+    <P style="color: blue;">SIMPLE INTEREST AND INTERPOLATION</P>
+    <br>
+    <div id="div1"></div>
+    <br>
+    <div id="div2"></div>
+    <br>
+    <h1 style="color: red;">question-2</h1>
+    <P style="color: blue;">PUSH AND POP COMMANDS</P>
+    <br>
+    <div id="div3"></div>
+    <br>
+    <div id="div4"></div>
+    <br>
+    <div id="div5"></div>
+    <br>
+    <div id="div9"></div>
+    <br>
+    <div id="div10"></div>
+    <br>
+    <h1 style="color: red;">question-3</h1>
+    <P style="color: blue;">SPLICE COMMAND</P>
+    <br>
+    <div id="div6"></div>
+    <br>
+    <div id="div7"></div>
+    <br>
+    <div id="div8"></div>
+    <br>
+    <div id="div8"></div>
+        <script>
+            function simpleinterest(p,n,r)
+            {    
+                si=((p*n*r)/100);
+                return si;
+            }
+            function totalamound(p,si)
+            {    
+                t=p+si
+                return t;
+            }
+            
+            let SI=simpleinterest(10000,4,20);
+            let ta=totalamound(10000,si);
+            let sip=`THE SIMPLE INTEREST = ${SI} AND  TOTAL AMOUND= ${ta}`;
+            
+            document.getElementById("div1").innerHTML="THE SIMPLE INTEREST IS"+"  "+SI;
+            document.getElementById("div2").innerHTML=sip;
+            
+            const color=["Red","Green","Yellow","Blue","Orange"];
+            document.getElementById("div3").innerHTML=color;
+            function poppop(a)
+            {
+               return color.pop();
+            }
+            document.getElementById("div4").innerHTML=poppop(color);
+            color.push("Indigo");
+            document.getElementById("div5").innerHTML=color;
+            color.shift();
+            document.getElementById("div9").innerHTML=color;
+            color.unshift("pink");
+            document.getElementById("div10").innerHTML=color;
+
+
+            const animals=["monkey","donkey","dog","cat","elephant"];
+            document.getElementById("div6").innerHTML=animals;
+            animals.splice(3,0,"loin","panda","camel");
+            document.getElementById("div7").innerHTML=animals;
+            animals.splice(2,2,"cow","sheep","horse");
+            document.getElementById("div8").innerHTML=animals;
+            animals.sort();
+            document.getElementById("div9").innerHTML=animals;
+
+            
+            
+        </script>
+        
+
+</body>
+</html>
